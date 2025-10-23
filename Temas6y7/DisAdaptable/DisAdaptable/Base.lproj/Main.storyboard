@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DisAdaptable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qfb-cE-kky">
+                                <rect key="frame" x="50" y="50" width="293" height="368"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqL-qz-XlK">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOn-y0-YzX">
+                                        <rect key="frame" x="0.0" y="167" width="293" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <color key="baseForegroundColor" red="0.59677249190000003" green="0.15039449930000001" blue="0.1176002696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUL-7w-y4p">
+                                        <rect key="frame" x="0.0" y="333.66666666666669" width="293" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Grid"/>
+                                        <connections>
+                                            <action selector="botongridaccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwb-8w-mKn"/>
+                                            <segue destination="Obh-1F-AIS" kind="show" identifier="gridsegue" id="mjO-LT-5Be"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qfb-cE-kky" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="9Nl-by-cup"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qfb-cE-kky" secondAttribute="bottom" constant="400" id="DRp-qj-PXE"/>
+                            <constraint firstItem="qfb-cE-kky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Wog-JM-pNg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qfb-cE-kky" secondAttribute="trailing" constant="50" id="YeA-wF-Dhz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botongrid" destination="YUL-7w-y4p" id="mDX-DY-GDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Grid View Controller-->
+        <scene sceneID="lSO-md-WAK">
+            <objects>
+                <viewController id="Obh-1F-AIS" customClass="GridViewController" customModule="DisAdaptable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ox0-F0-CMn" customClass="Gridviewcon">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ue7-kk-ecq">
+                                <rect key="frame" x="64" y="176" width="265" height="466"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjI-Ix-Xzc">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="466"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgf-SM-9xx">
+                                        <rect key="frame" x="99.666666666666657" y="0.0" width="75" height="466"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <color key="baseForegroundColor" red="0.59677249190000003" green="0.15039449930000001" blue="0.1176002696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-0t-1CI">
+                                        <rect key="frame" x="208.66666666666669" y="0.0" width="56.333333333333314" height="466"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Grid"/>
+                                        <connections>
+                                            <action selector="botongridaccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmr-u4-foW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kTI-0F-iek"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kTI-0F-iek" firstAttribute="trailing" secondItem="Ue7-kk-ecq" secondAttribute="trailing" constant="64" id="10V-Fg-feg"/>
+                            <constraint firstItem="kTI-0F-iek" firstAttribute="bottom" secondItem="Ue7-kk-ecq" secondAttribute="bottom" constant="200" id="KLw-3d-3Xh"/>
+                            <constraint firstItem="Ue7-kk-ecq" firstAttribute="top" secondItem="kTI-0F-iek" secondAttribute="top" constant="176" id="Kgx-98-aWM"/>
+                            <constraint firstItem="Ue7-kk-ecq" firstAttribute="leading" secondItem="kTI-0F-iek" secondAttribute="leading" constant="64" id="hG7-mA-fPd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Sp-eP-iro"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95k-fd-r8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
